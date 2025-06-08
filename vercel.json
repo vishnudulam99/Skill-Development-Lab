@@ -1,0 +1,19 @@
+{
+  "buildCommand": "echo 'Building static projects...'",
+  "outputDirectory": "./",
+  "functions": {},
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/Experiment-([0-9]+)_(.*?)/(.*)",
+      "dest": "/Experiment-$1_$2/$3"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
