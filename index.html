@@ -124,6 +124,7 @@
         .project-links {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -135,6 +136,8 @@
             transition: all 0.3s ease;
             cursor: pointer;
             font-size: 0.9rem;
+            text-align: center;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -148,7 +151,13 @@
             border: 2px solid #667eea;
         }
 
-        .btn:hover {
+        .btn-disabled {
+            background: #ccc;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        .btn:hover:not(.btn-disabled) {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
@@ -182,6 +191,15 @@
         .stat-label {
             font-size: 1rem;
             opacity: 0.9;
+        }
+
+        .note {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            color: white;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -223,6 +241,10 @@
                     <span class="stat-label">Passion</span>
                 </div>
             </div>
+
+            <div class="note">
+                <p>📝 Some projects require local setup for full functionality. Check the GitHub repository for setup instructions.</p>
+            </div>
         </div>
 
         <div class="projects-grid">
@@ -232,8 +254,8 @@
                 <span class="project-tech">CSS</span>
                 <p class="project-description">A responsive shopping cart interface built with pure CSS, featuring modern design patterns and smooth animations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-01_Shopping-cart-app_CSS" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-01_Shopping-cart-app_CSS" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -243,8 +265,8 @@
                 <span class="project-tech">Bootstrap</span>
                 <p class="project-description">Enhanced shopping cart using Bootstrap framework for responsive design and improved user experience.</p>
                 <div class="project-links">
-                    <a href="./Experiment-02_Shopping-cart-app_Bootstrap/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-02_Shopping-cart-app_Bootstrap" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-02_Shopping-cart-app_Bootstrap" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -254,8 +276,8 @@
                 <span class="project-tech">JavaScript</span>
                 <p class="project-description">Advanced form validation system with real-time feedback and comprehensive error handling.</p>
                 <div class="project-links">
-                    <a href="./Experiment-03_Shopping-cart-app_validation/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-03_Shopping-cart-app_validation" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-03_Shopping-cart-app_validation/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-03_Shopping-cart-app_validation" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -265,8 +287,8 @@
                 <span class="project-tech">Vue.js</span>
                 <p class="project-description">Dynamic weather app built with Vue.js, featuring API integration and interactive visualizations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-04_Weather_information_Vue/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-04_Weather_information_Vue" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-04_Weather_information_Vue/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-04_Weather_information_Vue" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -276,8 +298,8 @@
                 <span class="project-tech">Java</span>
                 <p class="project-description">Complete CRUD application built with Java, demonstrating database operations and object-oriented programming.</p>
                 <div class="project-links">
-                    <a href="./Experiment-05_Java-standalone_CRUD_app/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-05_Java-standalone_CRUD_app" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Local Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-05_Java-standalone_CRUD_app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -287,8 +309,8 @@
                 <span class="project-tech">Java Servlets</span>
                 <p class="project-description">Web application using Java Servlets for server-side processing and MVC architecture implementation.</p>
                 <div class="project-links">
-                    <a href="./Experiment-06_Servlet-Based-Controller/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-06_Servlet-Based-Controller" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Server Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-06_Servlet-Based-Controller" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -298,8 +320,8 @@
                 <span class="project-tech">Web Sessions</span>
                 <p class="project-description">Comprehensive session management system demonstrating user authentication and state management.</p>
                 <div class="project-links">
-                    <a href="./Experiment-07_Session-Management/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-07_Session-Management" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Server Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-07_Session-Management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -309,8 +331,8 @@
                 <span class="project-tech">Node.js</span>
                 <p class="project-description">Custom web server built from scratch with Node.js, showcasing backend development skills.</p>
                 <div class="project-links">
-                    <a href="./Experiment-08_NodeJS_Custom_Server/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-08_NodeJS_Custom_Server" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-08_NodeJS_Custom_Server" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -320,8 +342,8 @@
                 <span class="project-tech">Node.js API</span>
                 <p class="project-description">RESTful API for student management system with full CRUD operations and database integration.</p>
                 <div class="project-links">
-                    <a href="./Experiment-09_NodeJS_Student-api/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-09_NodeJS_Student-api" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-09_NodeJS_Student-api" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -331,8 +353,8 @@
                 <span class="project-tech">Node.js + JWT</span>
                 <p class="project-description">Secure authentication system using JSON Web Tokens for stateless user management.</p>
                 <div class="project-links">
-                    <a href="./Experiment-10_NodeJS_JWT_Auth/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-10_NodeJS_JWT_Auth" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-10_NodeJS_JWT_Auth" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -342,8 +364,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Modern student management interface built with React, featuring component-based architecture.</p>
                 <div class="project-links">
-                    <a href="./Experiment-11_ReactJS_Student-management/build/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-11_ReactJS_Student-management" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-11_ReactJS_Student-management/build/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-11_ReactJS_Student-management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -353,8 +375,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Interactive weather application with React hooks, API integration, and responsive design.</p>
                 <div class="project-links">
-                    <a href="./Experiment-12_ReactJS_Weather-app/build/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-12_ReactJS_Weather-app" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-12_ReactJS_Weather-app/weather-app/public/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-12_ReactJS_Weather-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -364,8 +386,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Feature-rich todo application demonstrating state management and modern React patterns.</p>
                 <div class="project-links">
-                    <a href="./Experiment-13_ReactJS_Todo-app/build/" class="btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-13_ReactJS_Todo-app" class="btn btn-secondary">View Code</a>
+                    <a href="./Experiment-13_ReactJS_Todo-app/build/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-13_ReactJS_Todo-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -375,8 +397,8 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Full-stack student management system using Django framework with admin interface and database integration.</p>
                 <div class="project-links">
-                    <a href="./Experiment-14_Django_Student-management/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-14_Django_Student-management" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-14_Django_Student-management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -386,8 +408,8 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Weather application built with Django, showcasing template rendering and API integration.</p>
                 <div class="project-links">
-                    <a href="./Experiment-15_Django_WeatherApp/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-15_Django_WeatherApp" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-15_Django_WeatherApp" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -397,8 +419,8 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Complete todo application with Django backend, featuring user authentication and task management.</p>
                 <div class="project-links">
-                    <a href="./Experiment-16_Django_Todo-app/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-16_Django_Todo-app" class="btn btn-secondary">View Code</a>
+                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-16_Django_Todo-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
         </div>
@@ -419,6 +441,29 @@
                 card.style.animation = 'fadeInUp 0.6s ease forwards';
             });
         });
+
+        // Function to check if link exists before navigating
+        function checkLink(element) {
+            const url = element.href;
+            
+            // For relative URLs, try to fetch and check if they exist
+            if (url.startsWith('./')) {
+                fetch(url, { method: 'HEAD' })
+                    .then(response => {
+                        if (!response.ok) {
+                            alert('This demo is not available. Please check the GitHub repository for setup instructions.');
+                            return false;
+                        }
+                        window.location.href = url;
+                    })
+                    .catch(() => {
+                        alert('This demo is not available. Please check the GitHub repository for setup instructions.');
+                    });
+                return false; // Prevent default navigation
+            }
+            
+            return true; // Allow default navigation for external links
+        }
 
         // Add CSS animation
         const style = document.createElement('style');
