@@ -273,16 +273,16 @@
             </div>
 
             <div class="note">
-                <p>📝 Some projects require local setup for full functionality. React apps may need build optimization for Vercel deployment.</p>
+                <p>📝 Some projects require local setup for full functionality. React apps may need build optimization for deployment.</p>
             </div>
 
             <div class="troubleshooting">
-                <h4>🔧 Troubleshooting React Apps:</h4>
-                <p>If React apps show blank pages, check browser console for errors. Common issues:</p>
+                <h4>🔧 Navigation Tips:</h4>
+                <p>Projects with live demos are accessible via clean URLs:</p>
                 <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
-                    <li>Missing build files or incorrect paths</li>
-                    <li>CORS issues with API calls</li>
-                    <li>Static file serving configuration</li>
+                    <li>Direct project access: yoursite.com/experiment-01</li>
+                    <li>Fallback to original paths if needed</li>
+                    <li>React apps optimized for deployment</li>
                 </ul>
             </div>
         </div>
@@ -294,7 +294,7 @@
                 <span class="project-tech">CSS</span>
                 <p class="project-description">A responsive shopping cart interface built with pure CSS, featuring modern design patterns and smooth animations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                    <a href="/experiment-01" class="btn btn-primary">
                         <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-01_Shopping-cart-app_CSS" class="btn btn-secondary" target="_blank">View Code</a>
@@ -307,7 +307,7 @@
                 <span class="project-tech">Bootstrap</span>
                 <p class="project-description">Enhanced shopping cart using Bootstrap framework for responsive design and improved user experience.</p>
                 <div class="project-links">
-                    <a href="./Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                    <a href="/experiment-02" class="btn btn-primary">
                         <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-02_Shopping-cart-app_Bootstrap" class="btn btn-secondary" target="_blank">View Code</a>
@@ -320,7 +320,7 @@
                 <span class="project-tech">JavaScript</span>
                 <p class="project-description">Advanced form validation system with real-time feedback and comprehensive error handling.</p>
                 <div class="project-links">
-                    <a href="./Experiment-03_Shopping-cart-app_validation/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                    <a href="/experiment-03" class="btn btn-primary">
                         <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-03_Shopping-cart-app_validation" class="btn btn-secondary" target="_blank">View Code</a>
@@ -333,7 +333,7 @@
                 <span class="project-tech">Vue.js</span>
                 <p class="project-description">Dynamic weather app built with Vue.js, featuring API integration and interactive visualizations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-04_Weather_information_Vue/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                    <a href="/experiment-04" class="btn btn-primary">
                         <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-04_Weather_information_Vue" class="btn btn-secondary" target="_blank">View Code</a>
@@ -424,8 +424,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Modern student management interface built with React, featuring component-based architecture.</p>
                 <div class="project-links">
-                    <a href="./Experiment-11_ReactJS_Student-management/build/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'student-management')">
-                        <span class="status-indicator status-issue"></span>Live Demo
+                    <a href="/experiment-11" class="btn btn-primary">
+                        <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-11_ReactJS_Student-management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
@@ -437,8 +437,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Interactive weather application with React hooks, API integration, and responsive design.</p>
                 <div class="project-links">
-                    <a href="./Experiment-12_ReactJS_Weather-app/weather-app/public/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'weather')">
-                        <span class="status-indicator status-issue"></span>Live Demo
+                    <a href="/experiment-12" class="btn btn-primary">
+                        <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-12_ReactJS_Weather-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
@@ -450,8 +450,8 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Feature-rich todo application demonstrating state management and modern React patterns.</p>
                 <div class="project-links">
-                    <a href="./Experiment-13_ReactJS_Todo-app/build/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'todo')">
-                        <span class="status-indicator status-issue"></span>Live Demo
+                    <a href="/experiment-13" class="btn btn-primary">
+                        <span class="status-indicator status-working"></span>Live Demo
                     </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-13_ReactJS_Todo-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
@@ -500,6 +500,9 @@
         <div class="footer">
             <p>🎯 Built with passion for learning and experimentation</p>
             <p>Each project represents a step in my development journey</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                Clean URLs powered by Vercel routing • Optimized for performance
+            </p>
         </div>
     </div>
 
@@ -512,104 +515,7 @@
                 card.style.animationDelay = `${index * 0.1}s`;
                 card.style.animation = 'fadeInUp 0.6s ease forwards';
             });
-            
-            // Check React app status on load
-            setTimeout(checkReactAppsStatus, 1000);
         });
-
-        // Function to check if link exists before navigating
-        function checkLink(element) {
-            const url = element.href;
-            
-            // For relative URLs, try to fetch and check if they exist
-            if (url.startsWith('./')) {
-                fetch(url, { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok) {
-                            alert('This demo is not available. Please check the GitHub repository for setup instructions.');
-                            return false;
-                        }
-                        window.location.href = url;
-                    })
-                    .catch(() => {
-                        alert('This demo is not available. Please check the GitHub repository for setup instructions.');
-                    });
-                return false; // Prevent default navigation
-            }
-            
-            return true; // Allow default navigation for external links
-        }
-
-        // Enhanced function for React apps
-        function checkReactApp(element, appType) {
-            const url = element.href;
-            
-            // Show specific message for React apps
-            const message = `
-React App Status: ${appType}
-
-Common Issues:
-• Build files missing or incomplete
-• Static assets not loading properly  
-• API endpoints not configured for production
-• CORS issues with external APIs
-
-Recommendations:
-1. Check browser console for specific errors
-2. Verify all build files are present
-3. Check network tab for failed requests
-4. Consider rebuilding the React app with proper base path
-
-Would you like to try opening it anyway?
-            `;
-            
-            if (confirm(message)) {
-                // Try to open in new tab to avoid navigation issues
-                window.open(url, '_blank');
-            }
-            
-            return false; // Prevent default navigation
-        }
-
-        // Function to check React apps status
-        async function checkReactAppsStatus() {
-            const reactApps = [
-                {
-                    selector: 'a[href*="Experiment-11_ReactJS_Student-management"]',
-                    url: './Experiment-11_ReactJS_Student-management/build/index.html'
-                },
-                {
-                    selector: 'a[href*="Experiment-12_ReactJS_Weather-app"]',
-                    url: './Experiment-12_ReactJS_Weather-app/weather-app/public/index.html'
-                },
-                {
-                    selector: 'a[href*="Experiment-13_ReactJS_Todo-app"]',
-                    url: './Experiment-13_ReactJS_Todo-app/build/index.html'
-                }
-            ];
-
-            for (const app of reactApps) {
-                try {
-                    const response = await fetch(app.url, { method: 'HEAD' });
-                    const element = document.querySelector(app.selector);
-                    const indicator = element?.querySelector('.status-indicator');
-                    
-                    if (indicator) {
-                        if (response.ok) {
-                            indicator.className = 'status-indicator status-working';
-                        } else {
-                            indicator.className = 'status-indicator status-issue';
-                        }
-                    }
-                } catch (error) {
-                    const element = document.querySelector(app.selector);
-                    const indicator = element?.querySelector('.status-indicator');
-                    if (indicator) {
-                        indicator.className = 'status-indicator status-issue';
-                    }
-                }
-            }
-        }
 
         // Add CSS animation
         const style = document.createElement('style');
