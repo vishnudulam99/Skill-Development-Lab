@@ -202,6 +202,36 @@
             text-align: center;
         }
 
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-working {
+            background-color: #4CAF50;
+        }
+
+        .status-issue {
+            background-color: #FF9800;
+        }
+
+        .status-disabled {
+            background-color: #9E9E9E;
+        }
+
+        .troubleshooting {
+            background: rgba(255,193,7,0.2);
+            border: 1px solid rgba(255,193,7,0.5);
+            color: #212529;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -243,7 +273,17 @@
             </div>
 
             <div class="note">
-                <p>📝 Some projects require local setup for full functionality. Check the GitHub repository for setup instructions.</p>
+                <p>📝 Some projects require local setup for full functionality. React apps may need build optimization for Vercel deployment.</p>
+            </div>
+
+            <div class="troubleshooting">
+                <h4>🔧 Troubleshooting React Apps:</h4>
+                <p>If React apps show blank pages, check browser console for errors. Common issues:</p>
+                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                    <li>Missing build files or incorrect paths</li>
+                    <li>CORS issues with API calls</li>
+                    <li>Static file serving configuration</li>
+                </ul>
             </div>
         </div>
 
@@ -254,7 +294,9 @@
                 <span class="project-tech">CSS</span>
                 <p class="project-description">A responsive shopping cart interface built with pure CSS, featuring modern design patterns and smooth animations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                        <span class="status-indicator status-working"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-01_Shopping-cart-app_CSS" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -265,7 +307,9 @@
                 <span class="project-tech">Bootstrap</span>
                 <p class="project-description">Enhanced shopping cart using Bootstrap framework for responsive design and improved user experience.</p>
                 <div class="project-links">
-                    <a href="./Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                        <span class="status-indicator status-working"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-02_Shopping-cart-app_Bootstrap" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -276,7 +320,9 @@
                 <span class="project-tech">JavaScript</span>
                 <p class="project-description">Advanced form validation system with real-time feedback and comprehensive error handling.</p>
                 <div class="project-links">
-                    <a href="./Experiment-03_Shopping-cart-app_validation/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-03_Shopping-cart-app_validation/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                        <span class="status-indicator status-working"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-03_Shopping-cart-app_validation" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -287,7 +333,9 @@
                 <span class="project-tech">Vue.js</span>
                 <p class="project-description">Dynamic weather app built with Vue.js, featuring API integration and interactive visualizations.</p>
                 <div class="project-links">
-                    <a href="./Experiment-04_Weather_information_Vue/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-04_Weather_information_Vue/index.html" class="btn btn-primary" onclick="return checkLink(this)">
+                        <span class="status-indicator status-working"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-04_Weather_information_Vue" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -298,7 +346,9 @@
                 <span class="project-tech">Java</span>
                 <p class="project-description">Complete CRUD application built with Java, demonstrating database operations and object-oriented programming.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Local Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Local Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-05_Java-standalone_CRUD_app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -309,7 +359,9 @@
                 <span class="project-tech">Java Servlets</span>
                 <p class="project-description">Web application using Java Servlets for server-side processing and MVC architecture implementation.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Server Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Server Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-06_Servlet-Based-Controller" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -320,7 +372,9 @@
                 <span class="project-tech">Web Sessions</span>
                 <p class="project-description">Comprehensive session management system demonstrating user authentication and state management.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Server Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Server Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-07_Session-Management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -331,7 +385,9 @@
                 <span class="project-tech">Node.js</span>
                 <p class="project-description">Custom web server built from scratch with Node.js, showcasing backend development skills.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Node.js
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-08_NodeJS_Custom_Server" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -342,7 +398,9 @@
                 <span class="project-tech">Node.js API</span>
                 <p class="project-description">RESTful API for student management system with full CRUD operations and database integration.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Node.js
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-09_NodeJS_Student-api" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -353,7 +411,9 @@
                 <span class="project-tech">Node.js + JWT</span>
                 <p class="project-description">Secure authentication system using JSON Web Tokens for stateless user management.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Node.js</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Node.js
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-10_NodeJS_JWT_Auth" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -364,7 +424,9 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Modern student management interface built with React, featuring component-based architecture.</p>
                 <div class="project-links">
-                    <a href="./Experiment-11_ReactJS_Student-management/build/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-11_ReactJS_Student-management/build/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'student-management')">
+                        <span class="status-indicator status-issue"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-11_ReactJS_Student-management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -375,7 +437,9 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Interactive weather application with React hooks, API integration, and responsive design.</p>
                 <div class="project-links">
-                    <a href="./Experiment-12_ReactJS_Weather-app/weather-app/public/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-12_ReactJS_Weather-app/weather-app/public/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'weather')">
+                        <span class="status-indicator status-issue"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-12_ReactJS_Weather-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -386,7 +450,9 @@
                 <span class="project-tech">React.js</span>
                 <p class="project-description">Feature-rich todo application demonstrating state management and modern React patterns.</p>
                 <div class="project-links">
-                    <a href="./Experiment-13_ReactJS_Todo-app/build/index.html" class="btn btn-primary" onclick="return checkLink(this)">Live Demo</a>
+                    <a href="./Experiment-13_ReactJS_Todo-app/build/index.html" class="btn btn-primary" onclick="return checkReactApp(this, 'todo')">
+                        <span class="status-indicator status-issue"></span>Live Demo
+                    </a>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-13_ReactJS_Todo-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -397,7 +463,9 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Full-stack student management system using Django framework with admin interface and database integration.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Django Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-14_Django_Student-management" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -408,7 +476,9 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Weather application built with Django, showcasing template rendering and API integration.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Django Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-15_Django_WeatherApp" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -419,7 +489,9 @@
                 <span class="project-tech">Django</span>
                 <p class="project-description">Complete todo application with Django backend, featuring user authentication and task management.</p>
                 <div class="project-links">
-                    <span class="btn btn-disabled">Requires Django Setup</span>
+                    <span class="btn btn-disabled">
+                        <span class="status-indicator status-disabled"></span>Requires Django Setup
+                    </span>
                     <a href="https://github.com/vishnudulam99/Skill-Development-Lab/tree/main/Experiment-16_Django_Todo-app" class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
@@ -440,6 +512,9 @@
                 card.style.animationDelay = `${index * 0.1}s`;
                 card.style.animation = 'fadeInUp 0.6s ease forwards';
             });
+            
+            // Check React app status on load
+            setTimeout(checkReactAppsStatus, 1000);
         });
 
         // Function to check if link exists before navigating
@@ -463,6 +538,77 @@
             }
             
             return true; // Allow default navigation for external links
+        }
+
+        // Enhanced function for React apps
+        function checkReactApp(element, appType) {
+            const url = element.href;
+            
+            // Show specific message for React apps
+            const message = `
+React App Status: ${appType}
+
+Common Issues:
+• Build files missing or incomplete
+• Static assets not loading properly  
+• API endpoints not configured for production
+• CORS issues with external APIs
+
+Recommendations:
+1. Check browser console for specific errors
+2. Verify all build files are present
+3. Check network tab for failed requests
+4. Consider rebuilding the React app with proper base path
+
+Would you like to try opening it anyway?
+            `;
+            
+            if (confirm(message)) {
+                // Try to open in new tab to avoid navigation issues
+                window.open(url, '_blank');
+            }
+            
+            return false; // Prevent default navigation
+        }
+
+        // Function to check React apps status
+        async function checkReactAppsStatus() {
+            const reactApps = [
+                {
+                    selector: 'a[href*="Experiment-11_ReactJS_Student-management"]',
+                    url: './Experiment-11_ReactJS_Student-management/build/index.html'
+                },
+                {
+                    selector: 'a[href*="Experiment-12_ReactJS_Weather-app"]',
+                    url: './Experiment-12_ReactJS_Weather-app/weather-app/public/index.html'
+                },
+                {
+                    selector: 'a[href*="Experiment-13_ReactJS_Todo-app"]',
+                    url: './Experiment-13_ReactJS_Todo-app/build/index.html'
+                }
+            ];
+
+            for (const app of reactApps) {
+                try {
+                    const response = await fetch(app.url, { method: 'HEAD' });
+                    const element = document.querySelector(app.selector);
+                    const indicator = element?.querySelector('.status-indicator');
+                    
+                    if (indicator) {
+                        if (response.ok) {
+                            indicator.className = 'status-indicator status-working';
+                        } else {
+                            indicator.className = 'status-indicator status-issue';
+                        }
+                    }
+                } catch (error) {
+                    const element = document.querySelector(app.selector);
+                    const indicator = element?.querySelector('.status-indicator');
+                    if (indicator) {
+                        indicator.className = 'status-indicator status-issue';
+                    }
+                }
+            }
         }
 
         // Add CSS animation
