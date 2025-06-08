@@ -1,16 +1,12 @@
 {
-  "buildCommand": "echo 'Building static projects...'",
-  "outputDirectory": "./",
-  "functions": {},
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/Experiment-([0-9]+)_(.*?)/(.*)",
-      "dest": "/Experiment-$1_$2/$3"
-    },
     {
       "src": "/(.*)",
       "dest": "/$1"
