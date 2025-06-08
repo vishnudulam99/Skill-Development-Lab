@@ -1,4 +1,15 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Experiment-*/**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/shopping-cart-css/(.*)",
@@ -14,11 +25,19 @@
     },
     {
       "src": "/weather-react/(.*)",
-      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/weather-app/public/$1"
+      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/weather-app/build/$1"
     },
     {
       "src": "/todo-react/(.*)",
-      "dest": "/Experiment-13_ReactJS_Todo-app/todo-app/public/$1"
+      "dest": "/Experiment-13_ReactJS_Todo-app/todo-app/build/$1"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/weather-app/build/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
