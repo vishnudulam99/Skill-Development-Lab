@@ -1,96 +1,24 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
-      "src": "/experiment-01",
-      "dest": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html"
+      "src": "/shopping-cart-css/(.*)",
+      "dest": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/$1"
     },
     {
-      "src": "/experiment-02", 
-      "dest": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html"
+      "src": "/shopping-cart-bootstrap/(.*)",
+      "dest": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/$1"
     },
     {
-      "src": "/experiment-03",
-      "dest": "/Experiment-03_Shopping-cart-app_validation/index.html"
+      "src": "/weather-vue/(.*)",
+      "dest": "/Experiment-04_Weather_information_Visualization_ES6/Weather-info-app/public/html/$1"
     },
     {
-      "src": "/experiment-04",
-      "dest": "/Experiment-04_Weather_information_Vue/index.html"
+      "src": "/weather-react/(.*)",
+      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/weather-app/public/$1"
     },
     {
-      "src": "/experiment-11",
-      "dest": "/Experiment-11_ReactJS_Student-management/build/index.html"
-    },
-    {
-      "src": "/experiment-12",
-      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/public/index.html"
-    },
-    {
-      "src": "/experiment-13",
-      "dest": "/Experiment-13_ReactJS_Todo-app/build/index.html"
-    },
-    {
-      "src": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/(.*)",
-      "dest": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/$1"
-    },
-    {
-      "src": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/(.*)",
-      "dest": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/$1"
-    },
-    {
-      "src": "/Experiment-03_Shopping-cart-app_validation/(.*)",
-      "dest": "/Experiment-03_Shopping-cart-app_validation/$1"
-    },
-    {
-      "src": "/Experiment-04_Weather_information_Vue/(.*)",
-      "dest": "/Experiment-04_Weather_information_Vue/$1"
-    },
-    {
-      "src": "/Experiment-11_ReactJS_Student-management/build/static/(.*)",
-      "dest": "/Experiment-11_ReactJS_Student-management/build/static/$1"
-    },
-    {
-      "src": "/Experiment-11_ReactJS_Student-management/(.*)",
-      "dest": "/Experiment-11_ReactJS_Student-management/build/$1"
-    },
-    {
-      "src": "/Experiment-12_ReactJS_Weather-app/weather-app/(.*)",
-      "dest": "/Experiment-12_ReactJS_Weather-app/weather-app/$1"
-    },
-    {
-      "src": "/Experiment-13_ReactJS_Todo-app/build/static/(.*)",
-      "dest": "/Experiment-13_ReactJS_Todo-app/build/static/$1"
-    },
-    {
-      "src": "/Experiment-13_ReactJS_Todo-app/(.*)",
-      "dest": "/Experiment-13_ReactJS_Todo-app/build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "/todo-react/(.*)",
+      "dest": "/Experiment-13_ReactJS_Todo-app/todo-app/public/$1"
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options", 
-          "value": "SAMEORIGIN"
-        }
-      ]
-    }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
