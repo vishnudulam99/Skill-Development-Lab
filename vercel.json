@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
@@ -8,44 +9,32 @@
   ],
   "rewrites": [
     {
-      "source": "/Experiment-01_Shopping-cart-app_CSS/(.*)",
-      "destination": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/$1"
+      "source": "/experiment-01",
+      "destination": "/Experiment-01_Shopping-cart-app_CSS/Shopping-cart-app/public/html/index.html"
     },
     {
-      "source": "/Experiment-02_Shopping-cart-app_Bootstrap/(.*)",
-      "destination": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/$1"
+      "source": "/experiment-02", 
+      "destination": "/Experiment-02_Shopping-cart-app_Bootstrap/ShoppingCartApp/public/html/index.html"
     },
     {
-      "source": "/Experiment-03_Shopping-cart-app_validation/(.*)",
-      "destination": "/Experiment-03_Shopping-cart-app_validation/$1"
+      "source": "/experiment-03",
+      "destination": "/Experiment-03_Shopping-cart-app_validation/index.html"
     },
     {
-      "source": "/Experiment-04_Weather_information_Vue/(.*)",
-      "destination": "/Experiment-04_Weather_information_Vue/$1"
+      "source": "/experiment-04",
+      "destination": "/Experiment-04_Weather_information_Vue/index.html"
     },
     {
-      "source": "/Experiment-11_ReactJS_Student-management/static/(.*)",
-      "destination": "/Experiment-11_ReactJS_Student-management/build/static/$1"
+      "source": "/experiment-11",
+      "destination": "/Experiment-11_ReactJS_Student-management/build/index.html"
     },
     {
-      "source": "/Experiment-11_ReactJS_Student-management/(.*)",
-      "destination": "/Experiment-11_ReactJS_Student-management/build/$1"
+      "source": "/experiment-12",
+      "destination": "/Experiment-12_ReactJS_Weather-app/weather-app/public/index.html"
     },
     {
-      "source": "/Experiment-12_ReactJS_Weather-app/static/(.*)",
-      "destination": "/Experiment-12_ReactJS_Weather-app/weather-app/build/static/$1"
-    },
-    {
-      "source": "/Experiment-12_ReactJS_Weather-app/(.*)",
-      "destination": "/Experiment-12_ReactJS_Weather-app/weather-app/build/$1"
-    },
-    {
-      "source": "/Experiment-13_ReactJS_Todo-app/static/(.*)",
-      "destination": "/Experiment-13_ReactJS_Todo-app/build/static/$1"
-    },
-    {
-      "source": "/Experiment-13_ReactJS_Todo-app/(.*)",
-      "destination": "/Experiment-13_ReactJS_Todo-app/build/$1"
+      "source": "/experiment-13",
+      "destination": "/Experiment-13_ReactJS_Todo-app/build/index.html"
     }
   ],
   "headers": [
@@ -57,16 +46,12 @@
           "value": "nosniff"
         },
         {
-          "key": "X-Frame-Options",
+          "key": "X-Frame-Options", 
           "value": "SAMEORIGIN"
         },
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     },
@@ -80,7 +65,7 @@
       ]
     },
     {
-      "source": "**/*.{js,css,png,jpg,jpeg,gif,ico,svg,woff,woff2,ttf,eot}",
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
       "headers": [
         {
           "key": "Cache-Control",
@@ -89,7 +74,7 @@
       ]
     },
     {
-      "source": "**/*.html",
+      "source": "/(.*\\.html)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -100,17 +85,11 @@
   ],
   "redirects": [
     {
-      "source": "/experiment-11",
-      "destination": "/Experiment-11_ReactJS_Student-management/build/index.html"
-    },
-    {
-      "source": "/experiment-12", 
-      "destination": "/Experiment-12_ReactJS_Weather-app/weather-app/build/index.html"
-    },
-    {
-      "source": "/experiment-13",
-      "destination": "/Experiment-13_ReactJS_Todo-app/build/index.html"
+      "source": "/",
+      "destination": "/index.html",
+      "permanent": false
     }
   ],
+  "cleanUrls": true,
   "trailingSlash": false
 }
