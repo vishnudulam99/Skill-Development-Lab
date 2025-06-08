@@ -36,4 +36,10 @@
       "last 1 safari version"
     ]
   }
+{
+  "homepage": "/weather-react",
+  "scripts": {
+    "build": "react-scripts build && echo '{\"version\": 3}' > build/config.json"
+  }
+}
 }
